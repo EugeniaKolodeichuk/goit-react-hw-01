@@ -1,8 +1,15 @@
 import PropTypes from 'prop-types';
 import styles from '../Profile/Profile.module.css';
 
-export default function Profile(props) {
-  const { avatar, name, tag, location, followers, views, likes } = props;
+export default function Profile({
+  avatar,
+  name,
+  tag,
+  location,
+  followers,
+  views,
+  likes,
+}) {
   return (
     <div className={styles.profile}>
       <div className={styles.description}>
@@ -31,11 +38,11 @@ export default function Profile(props) {
 }
 
 Profile.propTypes = {
-  avatar: PropTypes.string,
-  name: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  followers: PropTypes.number,
-  views: PropTypes.number,
-  likes: PropTypes.number,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  followers: PropTypes.number.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
 };
